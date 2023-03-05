@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Work5</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="styles/libs/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/style.min.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row flex-nowrap">
+				<div class="col col--sidebar g-0" id="mobile-menu">
+					<aside class="sidebar">
+						<button class="btn-close" id="mobile-menu-close" type="button"></button><a class="logo" href="/">
+							<picture>
+								<source data-srcset="img/logo.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="img/logo.png" alt="" width="82" height="32"/>
+							</picture></a>
+						<nav class="side-nav">
+							<ul class="side-nav__list">
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-home">
+												<use xlink:href="img/svg/sprite.svg#home"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Главная</div></a></li>
+								<li class="side-nav__item side-nav__item--active"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-cart">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Мои магазины</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-promo">
+												<use xlink:href="img/svg/sprite.svg#promo"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Промоматериалы</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-stat">
+												<use xlink:href="img/svg/sprite.svg#stat"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Статистика</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-vallet">
+												<use xlink:href="img/svg/sprite.svg#vallet"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Баланс</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-person">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Персональные данные</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-faq">
+												<use xlink:href="img/svg/sprite.svg#faq"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">FAQ</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-headphones">
+												<use xlink:href="img/svg/sprite.svg#headphones"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Техподдержка</div></a></li>
+								<li class="side-nav__item"><a href="#">
+										<div class="side-nav__item-icon">
+											<svg class="icon icon-leave">
+												<use xlink:href="img/svg/sprite.svg#leave"></use>
+											</svg>
+										</div>
+										<div class="side-nav__item-name">Выход</div></a></li>
+							</ul>
+						</nav>
+					</aside>
+				</div>
+				<div class="col col--main g-0">
+					<main class="main">
+						<div class="top-panel-wrapper">
+							<div class="top-panel">
+								<div class="top-panel__mobile-inner">
+									<div class="mob-menu-toggle mb-2">
+										<svg class="icon icon-mmenu">
+											<use xlink:href="img/svg/sprite.svg#mmenu"></use>
+										</svg>
+									</div>
+									<nav class="breadcrumb">
+										<div class="breadcrumb-item"><a href="#">Главная</a></div>
+										<div class="breadcrumb-item">Мои магазины</div>
+									</nav>
+								</div>
+								<div class="user-panel"><a class="user-panel__messages user-panel__messages--have-unread" href="#">
+										<div class="user-panel__messages-icon">
+											<svg class="icon icon-envelope">
+												<use xlink:href="img/svg/sprite.svg#envelope"></use>
+											</svg>
+										</div></a><a class="user-panel__profile" href="#">
+										<div class="user-panel__profile-avatar">
+											<picture>
+												<source data-srcset="img/avatar.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="img/avatar.png" alt="" width="41" height="41"/>
+											</picture>
+										</div>
+										<div class="user-panel__profile-name">Максим Добжанский</div></a></div>
+							</div>
+							<button class="btn btn--green btn--sm px-3" data-bs-toggle="modal" data-bs-target="#shop-modal"><span class="btn__plus">+</span><span>Создать свой магазин</span></button>
+						</div>
+						<div class="shops-panel">
+							<h2 class="h2">Управление магазинами</h2>
+							<div class="shops-table-wrapper table-responsive col-xxl-10">
+								<table class="table table--shops mb-0">
+									<thead>
+										<tr>
+											<th>№</th>
+											<th>Название</th>
+											<th>Адрес</th>
+											<th>Действие</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>12345</td>
+											<td>Дипломная работа</td>
+											<td><a href="#">http://www.work5.ru/services</a></td>
+											<td>
+												<div class="d-flex flex-nowrap">
+													<button class="btn btn--green btn--sm btn--icon px-3 me-2">
+														<div class="btn__icon">
+															<svg class="icon icon-pencil">
+																<use xlink:href="img/svg/sprite.svg#pencil"></use>
+															</svg>
+														</div><span>Редактировать</span>
+													</button>
+													<button class="btn btn--gray btn--sm btn--icon px-3">
+														<div class="btn__icon">
+															<svg class="icon icon-cross">
+																<use xlink:href="img/svg/sprite.svg#cross"></use>
+															</svg>
+														</div><span>Редактировать</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>12345</td>
+											<td>Дипломная работа</td>
+											<td><a href="#">http://www.work5.ru/services</a></td>
+											<td>
+												<div class="d-flex flex-nowrap">
+													<button class="btn btn--green btn--sm btn--icon px-3 me-2">
+														<div class="btn__icon">
+															<svg class="icon icon-pencil">
+																<use xlink:href="img/svg/sprite.svg#pencil"></use>
+															</svg>
+														</div><span>Редактировать</span>
+													</button>
+													<button class="btn btn--gray btn--sm btn--icon px-3">
+														<div class="btn__icon">
+															<svg class="icon icon-cross">
+																<use xlink:href="img/svg/sprite.svg#cross"></use>
+															</svg>
+														</div><span>Редактировать</span>
+													</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+		<div class="modal modal--shop fade" id="shop-modal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<h2 class="h2">Создать магазин</h2>
+					<button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+					<form>
+						<div class="row justify-content-between mb-4">
+							<div class="col-sm-5 mb-3 mb-sm-0">
+								<label class="form-label" for="fs1">Шаблон</label>
+								<select class="form-select" id="fs1">
+									<option>Стандартный</option>
+									<option>Нестандартный</option>
+								</select>
+							</div>
+							<div class="col-sm-5">
+								<label class="form-label" for="fs2">Цветовая схема</label>
+								<select class="form-select" id="fs2">
+									<option>Классическая</option>
+									<option>Современная</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<label class="form-label" for="fc1">Домен</label>
+							<div class="input-group">
+								<input class="form-control form-control--domain" id="fc1" type="text" placeholder="Например: ivangrozniy"><span class="input-group-text input-group-text--domain">.work5.ru</span>
+							</div>
+						</div>
+						<div class="disclaimer mb-5">
+							<div class="disclaimer__icon">
+								<svg class="icon icon-warning">
+									<use xlink:href="img/svg/sprite.svg#warning"></use>
+								</svg>
+							</div>
+							<div class="disclaimer__text">В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a></div>
+						</div>
+						<button class="btn btn--gray btn--lg px-4 px-5-sm">Отмена</button>
+						<button class="btn btn--green btn--lg px-4 px-5-sm" type="submit">Создать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/vendor.min.js"></script>
+		<script src="scripts/main.min.js"></script>
+	</body>
+</html>

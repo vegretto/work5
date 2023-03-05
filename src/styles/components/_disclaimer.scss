@@ -1,0 +1,28 @@
+.disclaimer {
+  display: flex;
+  align-items: flex-start;
+
+  &__icon {
+    margin-right: 16px;
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      fill: $transparent;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $template-gray;
+
+    a {
+      color: $template-purple;
+      &:hover {
+        text-decoration-color: $template-purple;
+      }
+    }
+  }
+}

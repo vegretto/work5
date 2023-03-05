@@ -1,0 +1,110 @@
+mixin icon(iconName)
+  svg(class="icon icon-" + iconName)
+    use(xlink:href="img/svg/sprite.svg#" + iconName)
+
+mixin picture(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '.webp' type="image/webp")
+    img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('img/' + src + '.' + ext) alt='' width=width height=height)
+
+mixin pictureAdaptive(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '-sm.webp'  type="image/webp" media="(max-width: 767px)")
+    source(data-srcset='img/' + src + '-sm.' + ext media="(max-width: 767px)")
+    source(data-srcset='img/' + src + '.webp' type="image/webp")
+    img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('img/' + src + '.' + ext) alt='' width=width height=height)
+
+mixin pictureFancybox(src, ext, width, height, dataFancyBox)
+  a(href='img/' + src + '.' + ext data-fancybox=dataFancyBox)
+    picture
+      source(data-srcset='img/' + src + '.webp' type="image/webp")
+      img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('img/' + src + '.' + ext) alt='' width=width height=height)
+
+mixin videoFancybox(src, ext, picSrc, picExt, picWidth, picHeight, dataFancyBox, playBtn)
+  a(href='video/' + src + '.' + ext data-fancybox=dataFancyBox)
+    if (playBtn)
+      .play-btn
+        +icon('play')
+    picture
+      source(data-srcset='img/' + picSrc + '.webp' type="image/webp")
+      img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=('img/' + picSrc + '.' + picExt) alt='' width=picWidth height=picHeight)
+
+mixin videoFancyboxYT(src, picSrc, picExt, width, height, picWidth, picHeight, dataFancyBox)
+  a(href=src data-fancybox=dataFancyBox class="fancybox.iframe")
+    picture
+      source(data-srcset='img/' + picSrc + '.webp' type="image/webp")
+      img.lazyload(data-src=('img/' + picSrc + '.' + picExt) alt='image' width=picWidth height=picHeight)
+
+mixin pictureNoWebp(src, ext, width, height)
+  img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/svg/' + src + '.' + ext)  alt='image' width=width height=height)
+
+mixin pictureNoWebpAdaptive(src, ext, width, height)
+  picture
+    source(data-srcset='img/' + src + '.' + ext media="(max-width: 768px)")
+    img.lazyload(src='data:image/svg+xml,%3Csvg viewBox="0 0 ' + width + ' ' + height + '" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="' + width + '" height="' + height + '" fill="%23f1f1f1"/%3E%3C/svg%3E' data-src=('img/' + src + '.' + ext) alt='image' width=width height=height)
+
+mixin form-group(type, id, label, required, inputClass, labelClass, placeholder)
+  div(class=`form-group`)
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    input(class=inputClass type=type id=id value=value required=required placeholder=placeholder)
+    .error-message Это поле обязательно для заполнения
+
+mixin form-group-date(id, label, required, inputClass, labelClass, placeholder)
+  div(class=`form-group form-group--datepicker`)
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    div.datepicker-wrapper
+      input(class=inputClass type='text' id=id readonly required=required placeholder=placeholder)
+    .error-message Это поле обязательно для заполнения
+
+mixin form-group-textarea(id, label, required, value, inputClass, labelClass, placeholder)
+  div(class=`form-group form-group--textarea`)
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    textarea(class=inputClass id=id rows=rows reqiured=required placeholder=placeholder) #{value}
+    .error-message Это поле обязательно для заполнения
+
+mixin form-group-checkbox(id, label, checked, required, inputClass, labelClass, formGroupClass)
+  div(class=`form-group form-group--checkbox ${formGroupClass}`)
+    .custom-cb-badge.js-custom-cb
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    input(class=inputClass type='checkbox' id=id checked=checked)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+
+mixin form-group-checkbox-allow(id, checked, required, inputClass, labelClass)
+  div(class="form-group form-group--checkbox js-checkbox" class=checked ? "checked" : "")
+    .custom-cb-badge.js-custom-cb(class=checked ? "checked" : "")
+    label(for=id class=labelClass) Согласие на обработку моих #[a(href="#") персональных данных]
+    input(class=inputClass type='checkbox' id=id checked=checked reqiured=required)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+mixin form-group-radio(id, label, checked, required, value, inputClass, labelClass)
+  div(class=`form-group form-group--checkbox`)
+    .custom-radio-badge.js-custom-radio
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    input(class=inputClass type='radio' id=id checked=checked)
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+mixin form-group-select(id, label, required, values, initialValue, inputClass, labelClass)
+  div(class=`form-group form-group--select`)
+    if (label.length > 0)
+      label(for=id class=labelClass) #{label}
+    .custom-select.js-custom-select
+      .custom-select__value.default.js-open-popup #{initialValue}
+      .custom-select-options.js-popup
+        each val in values
+          .custom-select-option.js-tabs-control= val
+      select(id=id)
+        each val in values
+          option= val
+    if (required)
+      .error-message Это поле обязательно для заполнения
+
+

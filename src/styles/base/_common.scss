@@ -1,0 +1,119 @@
+.main {
+  padding: 20px 15px  20px 60px;
+  background-color: #F8FAFF;
+  @media (max-width: 1199px) {
+    padding: 20px 15px;
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  img {
+    width: 82px;
+    height: 32px;
+  }
+}
+
+.col {
+  &--sidebar {
+    flex-basis: 256px;
+    max-width: 256px;
+
+    @media (max-width: 991px) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      transition: .2s ease-in-out;
+      z-index: 2;
+    }
+
+    &.opened {
+      @media (max-width: 991px) {
+        transform: translateX(0);
+        transition: .2s ease-in-out;
+      }
+    }
+  }
+
+  &--main {
+    max-width: calc(100vw - 256px);
+
+    @media (max-width: 991px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.breadcrumb {
+  --bs-breadcrumb-divider: '>';
+  --bs-breadcrumb-item-padding-x: 0.2rem;
+}
+
+.breadcrumb-item {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 21px;
+  color: #656565;
+
+  a {
+    color: #656565;
+    &:hover {
+      text-decoration-color: #656565;
+    }
+  }
+}
+
+.top-panel-wrapper {
+  margin-bottom: 35px;
+}
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 21px;
+  color: $template-dark-gray;
+}
+
+.mob-menu-toggle {
+  padding: 5px 5px 5px 0;
+  display: none;
+  .icon {
+    fill: $template-dark-gray;
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 991px) {
+    display: inline-block;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 30px;
+  right: 22px;
+  background-size: cover;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.5' cy='8.5' r='7.98683' transform='rotate(0.088995 8.5 8.5)' stroke='%23656565'/%3E%3Cpath d='M5.94629 5.94621L10.9408 10.7489' stroke='%23656565' stroke-linecap='round'/%3E%3Cpath d='M10.9409 5.95027L5.95037 10.7489' stroke='%23656565' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  --bs-btn-close-opacity: 1;
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0005;
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}

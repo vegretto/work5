@@ -1,0 +1,74 @@
+.btn {
+  border-radius: 3px;
+  &--green {
+    background-color: $template-green;
+    color: $white;
+
+    .icon {
+      stroke: $white;
+      fill: $white;
+    }
+
+    &:hover {
+      color: $template-green;
+      background-color: $white;
+      border-color: $template-green;
+
+      .icon {
+        stroke: $template-green;
+        fill: $template-green;
+      }
+    }
+  }
+
+  &--gray {
+    background-color: #b1b1b1;
+    color: $white;
+
+    .icon {
+      stroke: $white;
+    }
+
+    &:hover {
+      color: #b1b1b1;
+      background-color: $white;
+      border-color: #b1b1b1;
+
+      .icon {
+        stroke: #b1b1b1;
+      }
+    }
+  }
+
+  &--sm {
+    font-size: 12px;
+    line-height: 21px;
+  }
+
+  &--lg {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $white;
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+
+    .icon {
+      width: 12px;
+      height: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  &__plus {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+  }
+}

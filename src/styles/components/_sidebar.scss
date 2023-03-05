@@ -1,0 +1,19 @@
+.sidebar {
+  padding: 25px;
+  background: $white;
+  box-shadow: 0 0 38px rgba(136, 167, 245, 0.08);
+
+  @media(max-width: 991px) {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .btn-close {
+    display: none;
+
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+}

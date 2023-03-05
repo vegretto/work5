@@ -1,0 +1,54 @@
+.modal {
+  &--shop {
+    --bs-modal-width: 620px;
+
+    .modal-content {
+      padding: 30px;
+    }
+
+    .h2 {
+      margin-bottom: 47px;
+    }
+
+    .form-label {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: $template-dark-gray
+    }
+
+    .form-control {
+      &--domain {
+        background-color: #E6E6E9;
+        &::placeholder {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          color: $template-gray
+        }
+      }
+    }
+
+    .input-group-text {
+      &--domain {
+        background-color: $template-purple;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: $white;
+        padding: 10px 45px;
+        @media (max-width: 600px) {
+          padding: 10px 15px;
+        }
+      }
+    }
+
+    .form-select {
+      font-size: 12px;
+      line-height: 21px;
+      color: $template-gray;
+    }
+  }
+
+
+}

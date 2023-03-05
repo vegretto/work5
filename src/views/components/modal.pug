@@ -1,0 +1,28 @@
+.modal.-shop.fade#shop-modal
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            h2.h2 Создать магазин
+            button.btn-close(type='button' data-bs-dismiss='modal')
+            form
+                .row.justify-content-between.mb-4
+                    .col-sm-5.mb-3.mb-sm-0
+                        label.form-label(for="fs1") Шаблон
+                        select.form-select#fs1
+                            option Стандартный
+                            option Нестандартный
+                    .col-sm-5
+                        label.form-label(for="fs2") Цветовая схема
+                        select.form-select#fs2
+                            option Классическая
+                            option Современная
+                .row.mb-4
+                    label.form-label(for="fc1") Домен
+                    .input-group
+                        input.form-control.form-control--domain#fc1(type="text" placeholder="Например: ivangrozniy")
+                        span.input-group-text.input-group-text--domain .work5.ru
+                .disclaimer.mb-5
+                    ._icon
+                        +icon('warning')
+                    ._text В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a>
+                button.btn.-gray.-lg.px-4.px-5-sm Отмена
+                button.btn.-green.-lg.px-4.px-5-sm(type="submit") Создать

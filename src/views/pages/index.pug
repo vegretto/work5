@@ -1,0 +1,127 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .container-fluid
+        .row.flex-nowrap
+            .col.-sidebar.g-0#mobile-menu
+                aside.sidebar
+                    button.btn-close#mobile-menu-close(type='button')
+                    a(href="/").logo
+                        +picture('logo', 'png', 82, 32)
+                    nav.side-nav
+                        ul._list
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('home')
+                                    ._item-name Главная
+                            li._item.-active
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('cart')
+                                    ._item-name Мои магазины
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('promo')
+                                    ._item-name Промоматериалы
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('stat')
+                                    ._item-name Статистика
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('vallet')
+                                    ._item-name Баланс
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('person')
+                                    ._item-name Персональные данные
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('faq')
+                                    ._item-name FAQ
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('headphones')
+                                    ._item-name Техподдержка
+                            li._item
+                                a(href="#")
+                                    ._item-icon
+                                        +icon('leave')
+                                    ._item-name Выход
+            .col.col--main.g-0
+                main.main
+                    .top-panel-wrapper
+                        .top-panel
+                            ._mobile-inner
+                                .mob-menu-toggle.mb-2
+                                    +icon('mmenu')
+                                nav.breadcrumb
+                                    .breadcrumb-item
+                                        a(href="#") Главная
+                                    .breadcrumb-item Мои магазины
+                            .user-panel
+                                a(href="#")._messages.-have-unread
+                                    ._messages-icon
+                                        +icon('envelope')
+                                a(href="#")._profile
+                                    ._profile-avatar
+                                        +picture('avatar', 'png', 41, 41)
+                                    ._profile-name Максим Добжанский
+                        button.btn.-green.-sm.px-3(data-bs-toggle="modal" data-bs-target="#shop-modal")
+                            span._plus +
+                            span Создать свой магазин
+                    .shops-panel
+                        h2.h2 Управление магазинами
+                        .shops-table-wrapper.table-responsive.col-xxl-10
+                            table.table.-shops.mb-0
+                                thead
+                                    tr
+                                        th №
+                                        th Название
+                                        th Адрес
+                                        th Действие
+                                tbody
+                                    tr
+                                        td 12345
+                                        td Дипломная работа
+                                        td
+                                            a(href="#") http://www.work5.ru/services
+                                        td
+                                            .d-flex.flex-nowrap
+                                                button.btn.-green.-sm.-icon.px-3.me-2
+                                                    ._icon
+                                                        +icon('pencil')
+                                                    span Редактировать
+                                                button.btn.-gray.-sm.-icon.px-3
+                                                    ._icon
+                                                        +icon('cross')
+                                                    span Редактировать
+                                    tr
+                                        td 12345
+                                        td Дипломная работа
+                                        td
+                                            a(href="#") http://www.work5.ru/services
+                                        td
+                                            .d-flex.flex-nowrap
+                                                button.btn.-green.-sm.-icon.px-3.me-2
+                                                    ._icon
+                                                        +icon('pencil')
+                                                    span Редактировать
+                                                button.btn.-gray.-sm.-icon.px-3
+                                                    ._icon
+                                                        +icon('cross')
+                                                    span Редактировать
+
+
+
+
+
+
